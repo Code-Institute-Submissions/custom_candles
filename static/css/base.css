@@ -1,0 +1,41 @@
+nav {
+    color:#642714 !important;
+    background-color: #ddcdc0 !important;
+}
+
+body {
+    color:#642714 !important;
+    background-color: #f5f3ef !important;
+    height: calc(100vh - 164px);
+
+}
+
+.nav-item a {
+    color:#642714 !important;
+}
+
+
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
