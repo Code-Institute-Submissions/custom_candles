@@ -1,20 +1,40 @@
+/*--------------------------------------------Navbar*/
 nav {
     color:#642714 !important;
     background-color: #ddcdc0 !important;
     min-height: 100px;
 }
 
-body {
-    color:#642714 !important;
-    background-color: #f5f3ef !important;
-    height: calc(100vh - 164px);
-
-}
-
 .nav-item a {
     color:#642714 !important;
 }
 
+.navbar-toggler {
+    z-index: 10 !important;
+    position:relative !important;
+    color:#642714 !important;
+
+
+}
+
+
+
+/*--------------------------------------------Text Colors*/
+
+
+
+/*--------------------------------------------Background Colors*/
+
+
+
+
+/*--------------------------------------------Jumbotron*/
+
+.jumbotron {
+    margin-bottom: 0rem;    
+    padding-top: 150px;
+
+}
 
 
 .hero-image {
@@ -35,11 +55,21 @@ body {
 }
 
 
-.jumbotron {
-    margin-bottom: 0rem;    
-    padding-top: 150px;
+
+
+
+body {
+    color:#642714 !important;
+    background-color: #f5f3ef !important;
+    height: calc(100vh - 164px);
 
 }
+
+
+
+
+
+
 
 
 /* -------------------------------- Media Queries */
@@ -49,19 +79,4 @@ body {
   .container {
     max-width: 80%;
   }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
 }
