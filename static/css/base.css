@@ -80,3 +80,89 @@ body {
     max-width: 80%;
   }
 }
+/*--------------------------------------------body*/
+
+.banner {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    padding: .5rem;
+    margin: 2rem;
+
+}
+
+.banner h2 {
+    padding:.25rem;
+    margin: 0rem;
+}
+/*--------------------------------------------testimonials*/
+
+
+.media-body p {
+    font-size: 14px; 
+}
+
+.quote-name {
+    display: block;
+    font-size: 80%;
+    color: #6c757d;
+}
+
+.media {
+     border: 2px solid grey;
+     border-radius: 5px;
+     min-height: 160px;
+}
+
+/*--------------------------------------------Footer*/
+footer {
+    background-color: #ddcdc0 !important;
+    min-height: 100px;
+}
+
+.social-networks {
+    padding-inline-start: 0px;
+     text-align: center;
+}
+
+.social-networks li {
+    display: inline;
+    
+}
+
+.social-networks i {
+    font-size: 150%;
+    margin: 1%;
+    padding: 5%;
+    color: #642714; 
+}
+
+.social-section {
+    color: #642714;
+    padding: 25px;
+}
+
+.contactinfo {
+    float: left;
+    padding: 25px;
+    color: #642714;
+    display: inline-block;
+   
+}
+
+.contactinfo p {
+    text-align: center;
+}
+
+.contactinfo i {
+    font-size: 110%;
+    color: #642714; 
+    margin:1%;
+    display: inline-block;
+}
+
+.copyright {
+    font-size: 60%;
+    vertical-align: bottom;
+    color: #642714;
+    text-align: center;
+}
