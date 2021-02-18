@@ -86,7 +86,10 @@ body {
     border-top-style: solid;
     border-bottom-style: solid;
     padding: .5rem;
-    margin: 2rem;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 
@@ -94,6 +97,19 @@ body {
     padding:.25rem;
     margin: 0rem;
 }
+
+.home-section {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    padding:5%;
+}
+
+
 /*--------------------------------------------testimonials*/
 
 
