@@ -3,20 +3,22 @@ from .models import scents, colours
 
 # Register your models here.
 
+
 class scentsAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
         'description',
-        'price',     
+        'price',
     )
 
     ordering = ('sku',)
 
+
 class coloursAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
-        'name',  
+        'name',
     )
 
     ordering = ('sku',)
