@@ -2,6 +2,8 @@ from django.db import models
 
 
 class colours(models.Model):
+    class Meta:
+        verbose_name_plural = 'Colours'
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
 
@@ -10,6 +12,8 @@ class colours(models.Model):
 
 
 class scents(models.Model):
+    class Meta:
+        verbose_name_plural = 'Scents'
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
