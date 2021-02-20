@@ -5,12 +5,12 @@ from .models import scents, colours
 def shop_product(request):
     """ A view to show the product options """
 
-    Scent = scents.objects.all()
-    Colour = colours.objects.all()
+    scent = scents.objects.all()
+    colour = colours.objects.all()
 
     context = {
-        'Scent': Scent,
-        'Colour': Colour,
+        'scent': scent,
+        'colour': colour,
 
     }
 

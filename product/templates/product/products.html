@@ -4,20 +4,61 @@
 {% block content %}
 
 
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 
 
-<div class="container jumbotron">
-    <div class = "row">
+<div class="container">
+    <div class="row">
         <div class="col">
-            {{  Scent }}
-            {{  Colour }}
-           
+            <img src="../media/product_image.png" class="img-fluid" alt="...">
+
+
         </div>
+        <div class="col">
+            <form>
+
+                <h2 class="text-center">Customise Your Candle</h2>
+                <div class="my-5">
+                    <label for="disabledTextInput" class="form-label me-3"><strong> Choose Jar Colour</strong></label>
+                    {% for colours in colour %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="{{  colours.name }}"
+                            value="{{  colours.name }}">
+                        <label class="form-check-label" for="{{  colours.name }}">{{  colours.name }}</label>
+                    </div>
+
+                    {% endfor %}
+                </div>
+                <div class="my-5">
+                    <label for="disabledSelect" class="form-label"><strong> Choose Scent One</strong></label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Scent Options</option>
+                        {% for scents in scent %}
+                        <option value="{{  scents.name }}">{{  scents.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="my-5">
+                    <label for="disabledSelect" class="form-label"><strong> Choose Scent Two</strong></label>
+                    <select class="form-select" aria-label="Default select example">
+
+                        <option selected>Scent Options</option>
+                        {% for scents in scent %}
+                        <option value="{{  scents.name }}">{{  scents.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <button type="submit" class="btn add_button">Add to bag</button>
+
+            </form>
+
+        </div>
+
     </div>
 </div>
 

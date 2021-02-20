@@ -19,8 +19,14 @@ nav {
 
 
 
-/*--------------------------------------------Text Colors*/
+/*--------------------------------------------Product Page*/
 
+
+.add_button {
+    color: #fff;
+    background-color: #642714 !important;
+    border-color: #642714 !important;
+}
 
 
 /*--------------------------------------------Background Colors*/
@@ -109,6 +115,10 @@ body {
     padding:5%;
 }
 
+.header-container {
+        padding-top: 164px;
+    }
+}
 
 /*--------------------------------------------testimonials*/
 
