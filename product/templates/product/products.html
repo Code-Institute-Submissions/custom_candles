@@ -19,14 +19,15 @@
 
         </div>
         <div class="col">
-            <form>
+             <form class="form" action="{% url 'add_to_bag' %}" method="POST">
+                {% csrf_token %}
 
                 <h2 class="text-center">Customise Your Candle</h2>
                 <div class="my-5">
                     <label for="disabledTextInput" class="form-label me-3"><strong> Choose Jar Colour</strong></label>
                     {% for colours in colour %}
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="{{  colours.name }}"
+                        <input class="form-check-input" type="radio" name="colour_select" id="{{  colours.name }}"
                             value="{{  colours.name }}">
                         <label class="form-check-label" for="{{  colours.name }}">{{  colours.name }}</label>
                     </div>
@@ -35,7 +36,7 @@
                 </div>
                 <div class="my-5">
                     <label for="disabledSelect" class="form-label"><strong> Choose Scent One</strong></label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name="scent_one_select" aria-label="Default select example">
                         <option selected>Scent Options</option>
                         {% for scents in scent %}
                         <option value="{{  scents.name }}">{{  scents.name }}</option>
@@ -44,7 +45,7 @@
                 </div>
                 <div class="my-5">
                     <label for="disabledSelect" class="form-label"><strong> Choose Scent Two</strong></label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name="scent_two_select" aria-label="Default select example">
 
                         <option selected>Scent Options</option>
                         {% for scents in scent %}
@@ -52,8 +53,32 @@
                         {% endfor %}
                     </select>
                 </div>
+                <div class="my-5">
+                    <p class="mt-3"><strong>Quantity:</strong></p>
+                    <div class="form-group w-50">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="decrement-qty btn btn-black rounded-0" data-item_id="" id="">
+                                    <span class="icon">
+                                        <i class="fas fa-minus"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
+                                max="99">
+                            <div class="input-group-append">
+                                <button class="increment-qty btn btn-black rounded-0" >
+                                    <span class="icon">
+                                        <i class="fas fa-plus"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <button type="submit" class="btn add_button">Add to bag</button>
+                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
 
             </form>
 
