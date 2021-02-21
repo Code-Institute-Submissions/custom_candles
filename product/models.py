@@ -9,6 +9,7 @@ class colours(models.Model):
 
     def __str__(self):
         return self.name
+ 
 
 
 class scents(models.Model):
@@ -21,3 +22,6 @@ class scents(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_price(self):
+        return self.price

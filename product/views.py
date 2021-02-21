@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import scents, colours
 
 
@@ -7,10 +7,12 @@ def shop_product(request):
 
     scent = scents.objects.all()
     colour = colours.objects.all()
+    #product = get_object_or_404(scents, pk=product_id)
 
     context = {
         'scent': scent,
         'colour': colour,
+        #'product': product,
 
     }
 
