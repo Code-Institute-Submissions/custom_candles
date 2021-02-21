@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import scents, product
+from .models import scents, products
 
 
 def shop_product(request):
     """ A view to show the product options """
 
     scent = scents.objects.all()
-    product = product.objects.all()
+    product = products.objects.all()
     #product = get_object_or_404(scents, pk=product_id)
 
     context = {

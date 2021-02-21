@@ -15,7 +15,7 @@ class scents(models.Model):
         return self.description
 
 
-class product(models.Model):
+class products(models.Model):
     class Meta:
         verbose_name_plural = 'Products'
     sku = models.CharField(max_length=254, null=True, blank=True)
