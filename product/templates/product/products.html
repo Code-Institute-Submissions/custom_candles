@@ -12,17 +12,41 @@
 
 
 <div class="container">
-    <div class="row">
+            {{ scent }}
 
-        <div class="col">
-            <img src="../media/product_image.png" class="img-fluid" alt="...">
+            <div class="row">
+                {% for products in product %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0">
+                        
+                        <a href="{{% url 'product_detail' product.id %}}">
+                            <img class="card-img-top img-fluid" src="{{ products.image.url }}" alt="{{ products.name }}">
+                        </a>
+                     
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ products.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">${{ products.price }}</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-    
 
+
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
 </div>
 
 
 
 {% endblock %}
-
