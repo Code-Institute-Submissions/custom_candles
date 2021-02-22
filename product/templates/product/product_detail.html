@@ -29,8 +29,7 @@
 
                 <div class="my-3">
                     <label for="disabledSelect" class="form-label"><strong> Choose Scent One</strong></label>
-                    <select class="form-select" name="scent_one_select" aria-label="Default select example">
-                        <option selected>Scent Options</option>
+                    <select class="form-select" name="scent_one_select" aria-label="Default select example" required>
                         {% for scents in scent %}
                         <option value="{{  scents.name }}">{{  scents.name }}</option>
                         {% endfor %}
