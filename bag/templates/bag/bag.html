@@ -20,8 +20,9 @@
     </div>
 
     <div class="row">
-        <div class="col">
-           
+        <div class="col">     
+            {% if bag_items %}
+            {{ bag_items }}
             <table class="table">
                 <thead>
                     <tr>
@@ -34,16 +35,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                   {% for Cart in cart %}
+                   
                     <tr>
-                        <th scope="row">1</th>
-                        <td>{{ Cart.products.all }}</td>
+                        <th scope="row"></th>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td>{{ price }}</td>
+                        <td></td>
+                        <td></td>
                     </tr>
-                  {% endfor %}
+                 
                 </tbody>
                 <tfoot>
                     <tr>
@@ -57,7 +58,7 @@
                 </tfoot>
 
             </table>
-            
+             {% else %}
             <p class="lead mb-5">Your bag is empty.</p>
             <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg">
                 <span class="icon">
@@ -65,7 +66,7 @@
                 </span>
                 <span class="text-uppercase">Shop Products</span>
             </a>
-        
+            {% endif %}
         </div>
     </div>
 

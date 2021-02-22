@@ -22,10 +22,10 @@
 
         </div>
         <div class="col-sm">
-            <form class="form" action="" method="POST">
+            <form class="form" action="{% url 'add_to_bag' product_det.id %}" method="POST">
                 {% csrf_token %}
 
-                <h3 class="text-center">{{ product_det.name }}</h3>
+                <h3 class="text-center">{{ product_det.name }} {{ product_det.id }}</h3>
 
                 <div class="my-3">
                     <label for="disabledSelect" class="form-label"><strong> Choose Scent One</strong></label>
@@ -50,29 +50,22 @@
                     <p class="mt-3"><strong>Quantity:</strong></p>
                     <div class="form-group w-50">
                         <div class="input-group">
-                            <div class="input-group-prepend">
-                                <button class="decrement-qty btn btn-black rounded-0" data-item_id="" id="">
-                                    <span class="icon">
-                                        <i class="fas fa-minus"></i>
-                                    </span>
-                                </button>
-                            </div>
                             <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
-                                max="99" data-item_id="{{ scents.name }}" id="id_qty_{{ scents.name }}">
-                            <div class="input-group-append">
-                                <button class="increment-qty btn btn-black rounded-0">
-                                    <span class="icon">
-                                        <i class="fas fa-plus"></i>
-                                    </span>
-                                </button>
-                            </div>
+                                max="99" data-item_id="{{ product_det.id }}" id="id_qty_{{ product_det.id }}">
                         </div>
                     </div>
                 </div>
+                <div class="my-3 px-4">
+                    <button type="submit" class="btn add_button">Add to bag</button>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
 
-                <button type="submit" class="btn add_button">Add to bag</button>
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-
+                    <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                </div>
             </form>
 
         </div>
