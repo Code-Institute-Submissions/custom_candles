@@ -26,8 +26,8 @@ def bag_contents(request):
     if len(bag_items)>=1:
         delivery = settings.STANDARD_DELIVERY_PRICE
     
-        if product_count % settings.PRODUCT_DISCOUNT_THRESHOLD==0:
-            discount = 5 * (product_count % settings.PRODUCT_DISCOUNT_THRESHOLD)
+        if quantity / settings.PRODUCT_DISCOUNT_THRESHOLD>=1:
+            discount = 5 * round(product_count / settings.PRODUCT_DISCOUNT_THRESHOLD)
         
         else:
             discount = 0  
