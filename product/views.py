@@ -5,26 +5,25 @@ from .models import scents, products
 def all_products(request):
     """ A view to show the list of products """
 
-    scent = scents.objects.all()
     product = products.objects.all()
 
     context = {
-        'scent': scent,
+        
         'product': product,
     }
 
     return render(request, 'product/products.html', context)
 
 
-def product_detail(request, product_id):
-    """ A view to show the detail for the product selected """
+def product_detail(request, products_id):
+    """ A view to show individual product details """
 
-    product = get_object_or_404(products, pk=product_id)
+    product_det = get_object_or_404(products, pk=products_id)
     scent = scents.objects.all()
 
     context = {
+        'product_det': product_det,
         'scent': scent,
-        'product': product,
     }
 
     return render(request, 'product/product_detail.html', context)
