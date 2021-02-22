@@ -22,11 +22,11 @@
     <div class="row">
         <div class="col">     
             {% if bag_items %}
-            {{ bag_items }}
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Item Image</th>
                         <th scope="col">Item</th>
                         <th scope="col">Scent One</th>
                         <th scope="col">Scent Two</th>
@@ -35,16 +35,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                   
+                   {% for item in bag_items %}
                     <tr>
                         <th scope="row"></th>
+                        <td class="p-3 w-25">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                        </td>
+                        <td>{{ item.product.name }}</td>
+                        <td>{{ item.scent_one }}</td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ item.quantity }}</td>
+                        <td>${{ item.product.price }}</td>
                     </tr>
-                 
+                    {% endfor %}
                 </tbody>
                 <tfoot>
                     <tr>
@@ -52,8 +55,13 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td>Total:</td>
                         <td></td>
+                        <td><h5><strong>Total: ${{ total|floatformat:2 }}</strong></h5>
+                        <h5>Delivery: ${{ delivery|floatformat:2 }}</h5>
+                        <h4 class="mt-2"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                        </td>
+
+                    
                     </tr>
                 </tfoot>
 

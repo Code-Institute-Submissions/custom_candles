@@ -11,14 +11,16 @@ def bag_contents(request):
     delivery = 0
     bag = request.session.get('bag',{})
 
-    for item_id, quantity in bag.items():
+    for item_id, item_data in bag.items():
         product = get_object_or_404(products, pk=item_id)
-        total += quantity * product.price
-        product_count += quantity
-        bag_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'product': product,
+        for scent_one, quantity in item_data['scent_one_dic'].items():
+          total += quantity * product.price
+          product_count += quantity
+          bag_items.append({
+              'item_id': item_id,
+              'quantity': quantity,
+              'product': product,
+              'scent_one': scent_one,
         })
 
     if len(bag_items)>=1:
