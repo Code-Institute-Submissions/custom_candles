@@ -28,3 +28,6 @@ class products(models.Model):
     
     def get_price(self):
         return self.price
+    
+    def __unicode__(self):
+        return self.name
