@@ -27,6 +27,21 @@ nav {
 
 }
 
+.nav-spacer {
+    padding-top: 145px;
+
+}
+
+/*--------------------------------------------Body*/
+
+
+body {
+    color:#642714 !important;
+    background-color: #f5f3ef !important;
+    
+
+}
+
 
 
 /*--------------------------------------------Product Page*/
@@ -39,17 +54,12 @@ nav {
 }
 
 
-/*--------------------------------------------Background Colors*/
-
-
 
 
 /*--------------------------------------------Jumbotron*/
 
 .jumbotron {
     margin-bottom: 0rem; 
-    margin-top: 2%;
- 
 
 }
 
@@ -73,17 +83,6 @@ nav {
 
 
 
-
-
-body {
-    color:#642714 !important;
-    background-color: #f5f3ef !important;
-    height: calc(100vh - 164px);
-    top: 11%;
-    position: absolute!important;
-  
-
-}
 
 
 
@@ -130,7 +129,7 @@ body {
 }
 
 .header-container {
-        padding-top: 164px;
+        padding-top: 50px;
     }
 }
 
