@@ -90,17 +90,17 @@
                         <td colspan="5" class="text-end">
                             <h5><strong>Total: ${{ total|floatformat:2 }}</strong></h5>
                             <h5>Delivery: ${{ delivery|floatformat:2 }}</h5>
-                            <h5>Discount: ${{ discount|floatformat:2 }}</h5>
+                            <h5>Discount: -${{ discount|floatformat:2 }}</h5>
                             <h4 class="mt-2"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="4" class="text-start">
-                            <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                            <a href="{% url 'shop' %}" class="btn back_button rounded-0 btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+                                <span class="text-uppercase ">Keep Shopping</span>
                             </a>
                         </td>
                         <td colspan="1" class="float-end">
@@ -128,6 +128,16 @@
                 <span class="text-uppercase">Shop Products</span>
             </a>
             {% endif %}
+        </div>
+    </div>
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
         </div>
     </div>
     {% endblock %}
