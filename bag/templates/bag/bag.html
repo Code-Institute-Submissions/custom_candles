@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load bag_tools %}
 {% block content %}
 
 
@@ -28,10 +28,9 @@
                         <th scope="col">#</th>
                         <th scope="col">Item Image</th>
                         <th scope="col">Item</th>
-                        <th scope="col">Scent One</th>
-                        <th scope="col">Scent Two</th>
+                        <th scope="col">Scent</th>
                         <th scope="col">Quantity</th>
-                        <th scope="col">Price</th>
+                        <th scope="col">Sub-Total</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,9 +42,6 @@
                         </td>
                         <td>{{ item.product.name }}</td>
                         <td>{{ item.scent_one }}</td>
-                        <td>
-
-                        </td>
                         <td class="py-3 w-25">
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
@@ -75,9 +71,12 @@
                                 </div>
                             </form>
                             <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-scent_one="{{ item.scent_one }}"><small>Remove</small></a>
+                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                                data-scent_one="{{ item.scent_one }}"><small>Remove</small></a>
                         </td>
-                        <td>${{ item.product.price }}</td>
+                        <td>
+                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -94,12 +93,14 @@
                             <h5>Discount: ${{ discount|floatformat:2 }}</h5>
                             <h4 class="mt-2"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                         </td>
-
-
                     </tr>
                 </tfoot>
-
             </table>
+            <div class="container header-container">
+                <div class="row">
+                    <div class="col"></div>
+                </div>
+            </div>
             {% else %}
             <p class="lead mb-5">Your bag is empty.</p>
             <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg">
@@ -111,10 +112,11 @@
             {% endif %}
         </div>
     </div>
-{% endblock %}
-{% block postloadjs %}
-{{ block.super }}
-{% include 'product/includes/quantity_input_script.html' %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {{ block.super }}
+    {% include 'product/includes/quantity_input_script.html' %}
 
     <script type="text/javascript">
         // Update quantity on click
@@ -137,4 +139,4 @@
                 });
         })
     </script>
-{% endblock %}
+    {% endblock %}

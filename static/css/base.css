@@ -17,6 +17,16 @@ nav {
 
 }
 
+.offer-banner {
+ 
+    left: 50%!important;
+    position: absolute!important;
+    transform: translate(-50%,-50%);
+    color: #ddcdc0!important;
+    background-color: #642714 !important;
+
+}
+
 
 
 /*--------------------------------------------Product Page*/
@@ -37,8 +47,9 @@ nav {
 /*--------------------------------------------Jumbotron*/
 
 .jumbotron {
-    margin-bottom: 0rem;    
-    padding-top: 150px;
+    margin-bottom: 0rem; 
+    margin-top: 2%;
+ 
 
 }
 
@@ -68,6 +79,9 @@ body {
     color:#642714 !important;
     background-color: #f5f3ef !important;
     height: calc(100vh - 164px);
+    top: 11%;
+    position: absolute!important;
+  
 
 }
 
@@ -164,12 +178,14 @@ footer {
 
 .social-section {
     color: #642714;
-    padding: 25px;
+   padding-left: 25px;
+    padding-right: 25px;
 }
 
 .contactinfo {
     float: left;
-    padding: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
     color: #642714;
     display: inline-block;
    

@@ -21,25 +21,15 @@
 
 
         </div>
-        <div class="col-sm">
-            <form class="form" action="{% url 'add_to_bag' product_det.id %}" method="POST">
+        <div class="col-sm position-relative">
+            <form class="form position-absolute top-50 start-50 translate-middle" action="{% url 'add_to_bag' product_det.id %}" method="POST">
                 {% csrf_token %}
 
-                <h3 class="text-center">{{ product_det.name }} {{ product_det.id }}</h3>
+                <h3 class="text-center">{{ product_det.name }}</h3>
 
                 <div class="my-3">
-                    <label for="disabledSelect" class="form-label"><strong> Choose Scent One</strong></label>
+                    <label for="disabledSelect" class="form-label"><strong> Choose Scent</strong></label>
                     <select class="form-select" name="scent_one_select" aria-label="Default select example" required>
-                        {% for scents in scent %}
-                        <option value="{{  scents.name }}">{{  scents.name }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="my-3">
-                    <label for="disabledSelect" class="form-label"><strong> Choose Scent Two</strong></label>
-                    <select class="form-select" name="scent_two_select" aria-label="Default select example">
-
-                        <option selected>Scent Options</option>
                         {% for scents in scent %}
                         <option value="{{  scents.name }}">{{  scents.name }}</option>
                         {% endfor %}
