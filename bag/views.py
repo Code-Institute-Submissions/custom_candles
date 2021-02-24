@@ -24,7 +24,7 @@ def add_to_bag(request, item_id):
     if item_id in list(bag.keys()):
         if scent_one in bag[item_id]['scent_one_dic'].keys():
             bag[item_id]['scent_one_dic'][scent_one] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]["scent_one_dic"][scent_one]}')
         else:
             bag[item_id] = {'scent_one_dic': {scent_one: quantity}}
             messages.success(request, f'Added {product.name} to your bag')
@@ -68,7 +68,3 @@ def remove_from_bag(request, item_id):
     
     except Exception as e:
         return HttpResponse(status=500)
-
-
-
-

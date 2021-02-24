@@ -10,7 +10,7 @@ nav {
 }
 
 .navbar-toggler {
-    z-index: 10 !important;
+    z-index: 10 ;
     position:relative !important;
     color:#642714 !important;
 
@@ -235,7 +235,7 @@ footer {
 
 .message-container {
     position: fixed;
-    top: 72px;
+    top: 150px;
     right: 15px;
     z-index: 99999999999;
 }
