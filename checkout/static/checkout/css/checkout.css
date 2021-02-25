@@ -54,3 +54,15 @@
     margin: 0;
     height: 100%;
 }
+
+
+/* code for the select button on the checkout page*/
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
