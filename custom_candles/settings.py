@@ -27,7 +27,7 @@ SECRET_KEY = 'vze(kgj*q0(p0@$_x0jz2)rmf_vnzvl+cn_(qjehsqm7c8)na^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['custom-scents.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['aoifem-custom-scents.herokuapp.com', 'localhost']
 
 
 # Application definition
