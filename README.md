@@ -112,6 +112,83 @@ Mobile Wireframe - View
   
 <hr>
 
+### Site Pages
+
+#### Base Template
+ 
+###### Navbar 
+ 
+- The navbar header contains the main site navigataion links. The brand logo in the top left acts as a home button to bring the user back to the home page. The user can also select the view products link to view the products page with all the products sold.
+ 
+- A logged out user can access the registration page or log in page through the user icon.
+ 
+- A logged in user can access their profile dashboard or log out through the user icon.
+ 
+- The user can view a price summary of their current orders underneath the bag icon. Clicking on the icon will bring them to their bag for a more detailed view.
+
+
+
+###### Footer
+
+The Footer contains all contact information for the company incuding email adress and social media links. 
+
+#### Homepage
+
+The home (Index) page is our primary landing page. The hompage is where the user first lands and it is used as the main selling and marketing section of the website. There is a banner just below the navbar with the lastest sales offer where a user can get $5 off their purchase when they buy 3 products. The jumbotron image shows a relaxing candle and contains a call to action button to allow the user to begin shopping the products on offer. 
+
+Below the jumbotron is where they environmental and sustainable features of the products are outlined. This is to reenforce the company message of producing products ethically and sustainably. 
+
+The homepage also contains some customer reviews that again reenforce the message of high quality, customisable and enviromentally friendly products.
+
+#### Products Page
+
+Products in the shop are displayed as thumbnail images with the product title category tag and price broken up by a horizontal line.When the user clicks on a product card, they are taken to the product details page of that selected product.
+
+#### Products Detail Page
+
+This page gives an in depth view of the product. The customer can select the scent and quantity that they would like to buy. The 'Keep Shopping' and 'Add To Bag' buttons are located below the product price and have a hover effect on them. When a user adds an item to their card a toast appears in the top right side of the screen with their bag details. 
+
+#### Shopping Bag
+
+The shopping bag page features a summary of all the items the user has added to their shopping cart.
+
+- There is a line in the table for each item added to the card which lists the product image, product name, scent and price.
+- The user has the ability to adjust the quantity in their cart. A user can also remove an item from their cart. When the quantity is updated. the subtotal will reflect the change.
+- Cart total, delivery total, discount and grand total of the user's cart are at the bottom of the table. 
+- The 'Secure Checkout' button proceedsto take the user to the payment screen operated by Stripe and it includes a lock image to reenforce the mesage of security. 
+
+#### Checkout 
+
+The checkoutpage contains a crispy form to allow the user to enter their billing and payment information. The payment template was taken from stripe. There is also an order summary to remind the user of what they are buying and clearly state how much will be charged to their card. 
+
+#### Stripe
+
+- Users can complete the checkout process by entering their card details.
+- Payment is handled though the secure Stripe API.
+- Once a user clicks to buy, a custom loader appears while the payment is processing and if a successful payment is made, the user is taken to the checkout success page.
+
+#### Checkout Success
+
+- An order confirmation email is then sent to the email provided by the user which contains all the information of their purchase(s).
+- The checkout success page gives the customer all their order information.
+- An order number is automatically generated on checkout.
+- The user is invited to check out our deals page after checkout.
+
+<hr>
+### Features Left to Implement
+Below are feature of the site that I would have liked to incorporate into the site had I not been subject to time constraints. 
+
+###### Social Sign Up
+I would liked to have used google and facebook information to sign up and register accounts using a customers google or facebook account. This would make it easier for customrs to register and log in. 
+
+###### Create products with 2 scents
+I would have liked for users to be able to select 2 scents for their products so that they could mix and match scents and make the products really customisable. 
+
+###### Customer product reviews
+I would have liked for customers to be able to leave reviews of products in the customer details page so that other customers could read and get an idea of the scents that are populaar. 
+
+<hr>
+
 ### Testing
   The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
   W3C Markup Validator - Results
