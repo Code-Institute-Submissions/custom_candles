@@ -41,8 +41,9 @@ The business goals of Custom Scents are:
   - Make a purchase on the site by way of card payment.
   - I want to view the site from any device (mobile, tablet, desktop).
   
-  <hr>
-##Design
+<hr>
+
+### Design
 
 #### Colour Scheme
 There are 4 main colours used for the site. The are: 
@@ -66,8 +67,7 @@ Home Page Wireframe - View
 Mobile Wireframe - View
 
 
-
-
+<hr>
 
 ### Features
   - Responsive on all device sizes
@@ -78,14 +78,18 @@ Mobile Wireframe - View
   - Toasts that pop up when an action is performed and provide useful information to the user. 
   - Heroku was used to host the site and postgres was used to store the database information
   - Technologies Used
-  
+
+<hr>
+
 ### Languages Used
   - HTML5
   - CSS3
   - Javascript
   - Python
   - Json
-  
+
+<hr>
+
 ### Frameworks, Libraries & Programs Used
   - Bootstrap 4.4.1:
   Bootstrap was used to assist with the responsiveness and styling of the website.
@@ -106,6 +110,8 @@ Mobile Wireframe - View
   - Balsamiq:
   Balsamiq was used to create the wireframes during the design process.
   
+<hr>
+
 ### Testing
   The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
   W3C Markup Validator - Results
@@ -121,10 +127,13 @@ A large amount of testing was done to ensure that all pages were linking correct
 Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 Known Bugs
  
-Heroku
+<hr>
+
+### Heroku
 The project was deployed wit Heroku following the instruction detailed here
  
- 
+<hr>
+
 ### Database Models
  
 When each app and its models were created and implemented, python manage.py makemigrations was run in the terminal to create the initial model package and python manage.py migrate was then used to apply the model to the database and create the table.
@@ -187,341 +196,18 @@ The User model used is the standard one provided by Django.
  
 
  
-Credits
-Code
+<hr>
+
+### Credits
+#### Code
 Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 Stripe Payments
 Django web framework
-Content
+
+#### Content
 All content was written by the developer.
-Media
-All Images were created by the developer.
-Acknowledgements
+#### Media
+All Images were created by the developer or taken from unsplash.com
+#### Acknowledgements
 My Mentor for continuous helpful feedback.
 Tutor support at Code Institute for their support.
- 
- 
- 
- 
- 
- 
- 
-Category Model
-Name
-Description
-Field Type
-Name
-max_length=250
-Charfield
-Friendly Name
-models.CharField(max_length=254, blank=True)
-Charfield
-
-Product Model
-Name
-Description
-Field Type
-Category
-null=True, blank=True, on_delete=models.SET_NULL
-ForeignKey
-Sku
-max_length=254, blank=True
-Charfield
-Name
-max_length=254
-Charfield
-Description
-blank
-TextField
-Has Sizes
-blank
-BooleanField
-Price
-max_digits=6, decimal_places=2
-DecimalField
-Rating
-max_digits=6,decimal_places=2, null=True, blank=True
-DecimalField
-Image Url
-max_length=1024, blank=True
-UrlField
-Image
-blank=True
-Image Field
-
-Order Model
-Name
-Description
-Field Type
-Order Number
-max_length=32, null=False, editable=False
-Charfield
-User Profile
-on_delete=models.SET_NULL,null=True, blank=True, related_name='orders'
-ForeignKey
-Full Name
-max_length=50, null=False, blank=False
-Charfield
-Email
-max_length=254, null=False, blank=False
-EmailField
-Phone Number
-max_length=20, null=False, blank=False
-Charfield
-Country
-blank_label='Country *', null=False, blank=False
-CoutryField
-Postcode
-max_length=20, blank=True
-Charfield
-Town or City
-max_length=40, null=False, blank=False
-Charfield
-Street Address 1
-max_length=80, null=False, blank=False
-Charfield
-Street Address 2
-max_length=80, blank=True
-Charfield
-County
-max_length=80, blank=True
-Charfield
-Date
-auto_now_add=True
-DateTimeField
-Delivery Cost
-max_digits=6, decimal_places=2, null=False, default=0
-DecimalField
-Order Total
-max_digits=10, decimal_places=2, null=False, default=0
-DecimalField
-Grand Total
-max_digits=10, decimal_places=2, null=False, default=0
-DecimalField
-Original Bag
-null=False, blank=False, default=''
-TextField
-Stripe Pid
-max_length=254, null=False, blank=False, default=''
-Charfield
-
-Order Item Model
-Name
-Description
-Field Type
-Order
-null=False, blank=False, on_delete=models.CASCADE,related_name='lineitems'
-ForeignKey
-Product
-null=False, blank=False, on_delete=models.CASCADE
-ForeignKey
-Product Size
-max_length=2, blank=True XS, S, M, L, XL
-CharField
-Quantity
-null=False, blank=False, default=0
-IntegerField
-Line Item Total
-max_digits=6, decimal_places=2, null=False, blank=False, editable=False
-Decimal Field
-
-Review Model
-Name
-Description
-Field Type
-Product
-on_delete=models.CASCADE, null=True, blank=True, related_name="reviews"
-ForeignKey
-User
-on_delete=models.CASCADE,null=True, blank=True, related_name="reviews"
-ForeignKey
-Comment
-max_length=1000, blank=True
-TextField
-Rating
-default=1
-IntegerField
-
-Contact Model
-Name
-Description
-Field Type
-Name
-max_length=200
-Charfield
-Message
-max_length=200, blank=True
-TextField
-Email
-max_length=200
-EmailField
-Contact Date
-default=datetime.now, blank=True)
-DateTimeField
-User Id
-null=True, on_delete=models.CASCADE
-ForeignKey
- 
-
- 
- 
- 
-Category Model
-Name
-Description
-Field Type
-Name
-max_length=250
-Charfield
-Friendly Name
-models.CharField(max_length=254, blank=True)
-Charfield
-
-Product Model
-Name
-Description
-Field Type
-Category
-null=True, blank=True, on_delete=models.SET_NULL
-ForeignKey
-Sku
-max_length=254, blank=True
-Charfield
-Name
-max_length=254
-Charfield
-Description
-blank
-TextField
-Has Sizes
-blank
-BooleanField
-Price
-max_digits=6, decimal_places=2
-DecimalField
-Rating
-max_digits=6,decimal_places=2, null=True, blank=True
-DecimalField
-Image Url
-max_length=1024, blank=True
-UrlField
-Image
-blank=True
-Image Field
-
-Order Model
-Name
-Description
-Field Type
-Order Number
-max_length=32, null=False, editable=False
-Charfield
-User Profile
-on_delete=models.SET_NULL,null=True, blank=True, related_name='orders'
-ForeignKey
-Full Name
-max_length=50, null=False, blank=False
-Charfield
-Email
-max_length=254, null=False, blank=False
-EmailField
-Phone Number
-max_length=20, null=False, blank=False
-Charfield
-Country
-blank_label='Country *', null=False, blank=False
-CoutryField
-Postcode
-max_length=20, blank=True
-Charfield
-Town or City
-max_length=40, null=False, blank=False
-Charfield
-Street Address 1
-max_length=80, null=False, blank=False
-Charfield
-Street Address 2
-max_length=80, blank=True
-Charfield
-County
-max_length=80, blank=True
-Charfield
-Date
-auto_now_add=True
-DateTimeField
-Delivery Cost
-max_digits=6, decimal_places=2, null=False, default=0
-DecimalField
-Order Total
-max_digits=10, decimal_places=2, null=False, default=0
-DecimalField
-Grand Total
-max_digits=10, decimal_places=2, null=False, default=0
-DecimalField
-Original Bag
-null=False, blank=False, default=''
-TextField
-Stripe Pid
-max_length=254, null=False, blank=False, default=''
-Charfield
-
-Order Item Model
-Name
-Description
-Field Type
-Order
-null=False, blank=False, on_delete=models.CASCADE,related_name='lineitems'
-ForeignKey
-Product
-null=False, blank=False, on_delete=models.CASCADE
-ForeignKey
-Product Size
-max_length=2, blank=True XS, S, M, L, XL
-CharField
-Quantity
-null=False, blank=False, default=0
-IntegerField
-Line Item Total
-max_digits=6, decimal_places=2, null=False, blank=False, editable=False
-Decimal Field
-
-Review Model
-Name
-Description
-Field Type
-Product
-on_delete=models.CASCADE, null=True, blank=True, related_name="reviews"
-ForeignKey
-User
-on_delete=models.CASCADE,null=True, blank=True, related_name="reviews"
-ForeignKey
-Comment
-max_length=1000, blank=True
-TextField
-Rating
-default=1
-IntegerField
-
-Contact Model
-Name
-Description
-Field Type
-Name
-max_length=200
-Charfield
-Message
-max_length=200, blank=True
-TextField
-Email
-max_length=200
-EmailField
-Contact Date
-default=datetime.now, blank=True)
-DateTimeField
-User Id
-null=True, on_delete=models.CASCADE
-ForeignKey
- 
-
- 
-
