@@ -99,11 +99,11 @@ Mobile Wireframe - View
   Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
   - GitHub:
   GitHub is used to store the project's code after being pushed from Git.
-  - Django
+  - Django:
   Django was used as the web framework for the site.
-  - Heroku 
+  - Heroku: <br>
   Heroku was used to deploy the site and to host the database
-  - Stripe Payments
+  - Stripe Payments:
   Stripe templates were used for payment processing and order management. 
   - Canva:
   Canva was used to create the logo for the website.
