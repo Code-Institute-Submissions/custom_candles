@@ -91,23 +91,23 @@ Mobile Wireframe - View
 <hr>
 
 ### Frameworks, Libraries & Programs Used
-  - Bootstrap 4.4.1:
+  - Bootstrap 4.4.1:<br>
   Bootstrap was used to assist with the responsiveness and styling of the website.
-  - jQuery:
+  - jQuery:<br>
   jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
-  - Git:
+  - Git:<br>
   Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-  - GitHub:
+  - GitHub:<br>
   GitHub is used to store the project's code after being pushed from Git.
-  - Django:
+  - Django:<br>
   Django was used as the web framework for the site.
   - Heroku: <br>
   Heroku was used to deploy the site and to host the database
   - Stripe Payments:
   Stripe templates were used for payment processing and order management. 
-  - Canva:
+  - Canva:<br>
   Canva was used to create the logo for the website.
-  - Balsamiq:
+  - Balsamiq:<br>
   Balsamiq was used to create the wireframes during the design process.
   
 <hr>
