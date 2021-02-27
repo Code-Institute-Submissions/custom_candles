@@ -121,6 +121,8 @@ Mobile Wireframe - View
     - Stripe templates were used for payment processing and order management. 
 13.  [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the design process.
+14. Other:
+    - All other installed packages can be found in the sites [requirements.txt](https://github.com/aoifemurfe/custom_candles/blob/master/requirements.txt) file
   
 <hr>
 
@@ -207,10 +209,26 @@ The lighthouse report at https://web.dev/measure/ was used to assess the website
 3. Best Practise 
 4. SEO
 
- - Lighthouse report - [Results]()
+ - Lighthouse report - [Results](https://github.com/aoifemurfe/custom_candles/blob/master/media/Lighthouse_Report.pdf)
   
 #### Testing User Stories from User Experience (UX) Section
-User experience testing was documented here.
+#### As the developer of the site:
+1.  I want to be able to showcase my ability to use Django frameworks and  integrate to stripe payments to create an e-commerce website. 
+    -The website used django framework and stripe payments to create a functioning ecommerce website.
+#### As a site customer I want to:
+1.  I want to be able to quickly understand the function of the site and see what products are on offer. 
+     - As described in the homepage section, the homepage quickly provides the customer with details about what is on offer and what the company customs scents has to    offer.  The navbar at the top shows the user easily each of the pages available to them and this dynamically changes based on whether the user has signed in or not. 
+3.  I want to be able to view the range of products on offer on the site and choose my own scent for each product. 
+     -  The homepage contains a call to action in the first card for the use to click the link to the registration page. The product and product details page show the user eash of the products and provide an easy to fill out form to cusomise the scent of the product the user is puchasing. 
+5.  I want to be able to understand the pricing information for the products I want and see the discounts and delivery charges applied. 
+     - The prices of each product are clearly listed on the products and product details page. There is a banner just below teh navbar with the special offer to entice the customer to buy more. The shopping bag and checkout page provide details of pricing for the products and the delivery and discount prices also.
+7.  I want to be able to create a user account so that it will store previous purchase history.
+     - The login and register page allow the user to create an account and log into their account. The user profile allows users to see their previous orders. 
+9.  Make a purchase on the site by way of card payment.
+     - The site used stripe and stripe webhooks to be able to make a payment securly on the website. 
+11.  I want to view the site from any device (mobile, tablet, desktop).
+     - The site uses bootstrap to be responsive on all devices. 
+  
 
 #### Further Testing
 The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
