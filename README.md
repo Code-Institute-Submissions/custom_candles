@@ -1,11 +1,16 @@
 # Custom Candles
 
 <hr>
+## Website Details
 
+### URL
+ - The website url is https://aoifem-custom-scents.herokuapp.com/
 
-### Code Institute / Full Stack Frameworks with Django Milestone Project
+### Purpose
 
 The brief was to build a full-stack site based around business logic used to control a centrally-owned dataset.The site needed an authentication mechanism and needed to provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
+
+### Further Information
 
 When testing payments in this application, please use the Stripe test card numbers available [here](https://stripe.com/docs/testing#cards) from the Stripe documents. During the testing of the site the card details that I used were:
 
@@ -82,33 +87,40 @@ Mobile Wireframe - View
 <hr>
 
 ### Languages Used
-  - HTML5
-  - CSS3
-  - Javascript
-  - Python
-  - Json
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+-   [Jinja](https://palletsprojects.com/p/jinja/)
+-   [Json](https://www.json.org/json-en.html)
 
 <hr>
 
 ### Frameworks, Libraries & Programs Used
-  - Bootstrap 4.4.1:<br>
-  Bootstrap was used to assist with the responsiveness and styling of the website.
-  - jQuery:<br>
-  jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
-  - Git:<br>
-  Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-  - GitHub:<br>
-  GitHub is used to store the project's code after being pushed from Git.
-  - Django:<br>
-  Django was used as the web framework for the site.
-  - Heroku: <br>
-  Heroku was used to deploy the site and to host the database
-  - Stripe Payments:
-  Stripe templates were used for payment processing and order management. 
-  - Canva:<br>
-  Canva was used to create the logo for the website.
-  - Balsamiq:<br>
-  Balsamiq was used to create the wireframes during the design process.
+1. [Bootstrap 4.4.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+    - Bootstrap was used to assist with the responsiveness and styling of the website.
+2. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+3. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+4. [MongoDB](https://www.mongodb.com/cloud/atlas):  
+    - MongoDB was used to store all data recodred for each user and each users workouts logged. 
+5. [Canva:](https://www.canva.com/)
+    - Canva was used to create the logo for the website.
+7. jQuery:]
+    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+8. [Git:](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+9. [GitHub:](https://github.com/)
+    - GitHub is used to store the project's code after being pushed from Git.
+10. [Django:](https://www.djangoproject.com/)
+    - Django was used as the web framework for the site.
+11. [Heroku:](https://www.heroku.com/)
+    - Heroku was used to deploy the site and to host the database
+12. [Stripe Payments:](https://stripe.com/)
+    - Stripe templates were used for payment processing and order management. 
+13.  [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the wireframes during the design process.
   
 <hr>
 
@@ -125,7 +137,6 @@ Mobile Wireframe - View
 - A logged in user can access their profile dashboard or log out through the user icon.
  
 - The user can view a price summary of their current orders underneath the bag icon. Clicking on the icon will bring them to their bag for a more detailed view.
-
 
 
 ###### Footer
@@ -190,9 +201,13 @@ I would have liked for customers to be able to leave reviews of products in the 
 <hr>
 
 ### Testing
-  The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-  W3C Markup Validator - Results
-  W3C CSS Validator - Results
+The lighthouse report at https://web.dev/measure/ was used to assess the website based on 4 categories
+1. Performance
+2. Accessability
+3. Best Practise 
+4. SEO
+
+ - Lighthouse report - [Results]()
   
 #### Testing User Stories from User Experience (UX) Section
 User experience testing was documented here.
