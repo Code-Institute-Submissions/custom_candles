@@ -1,0 +1,1 @@
+web: gunicorn custom_candles.wsgi:application
